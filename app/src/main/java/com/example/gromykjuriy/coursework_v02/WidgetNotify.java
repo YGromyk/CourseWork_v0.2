@@ -12,7 +12,6 @@ import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.Build;
 import android.support.v4.app.NotificationCompat;
-import res.drawable.*;
 /**
  * Helper class for showing and canceling widget notify
  * notifications.

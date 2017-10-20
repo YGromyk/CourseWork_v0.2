@@ -7,7 +7,7 @@
 
 #include "Question.h"
 #include <list>
-
+#include <jni.h>
 class ListTest {
 private:
     list<Question> base;

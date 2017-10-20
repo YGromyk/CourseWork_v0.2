@@ -18,7 +18,8 @@ private:
 public:
     Question(string _question, string _answer);
     map<string, string> getQuestion();
-
+    string getAsk();
+    string getAnswer();
     friend  fstream& operator>>(fstream& stream, Question &_question);
 
 };

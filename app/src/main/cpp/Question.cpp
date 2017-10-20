@@ -23,6 +23,14 @@ fstream& operator>>(fstream& stream, Question &_question)
 
 }
 
+string Question::getAnswer() {
+return this->answer;
+}
+
+string Question::getAsk() {
+    return this->question;
+}
+
 
 vector<string>  split(string text) {
     string delims = "!@#$%^&*()_-=+||\\//?><,.		      ";
