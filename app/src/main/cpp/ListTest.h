@@ -8,70 +8,71 @@
 #include "Question.h"
 #include <list>
 #include <jni.h>
+
 class ListTest {
 private:
-    list<Question> base;
+    map<string, string> base;
 public:
     ListTest(){
     }
 
-    list<Question> CreateList(){
-        base.push_back(Question("action","дія, вчинок"));
-        base.push_back(Question("activity","діяльність"));
-        base.push_back(Question("adverb","прислівник"));
-        base.push_back(Question("allow","дозволяти"));
-        base.push_back(Question("brave","сміливий"));
-        base.push_back(Question("bottle","пляшка"));
-        base.push_back(Question("beard","борода"));
-        base.push_back(Question("awful","жахливий"));
-        base.push_back(Question("catch","зловити, впіймати"));
-        base.push_back(Question("carol","різдв’яна пісня"));
-        base.push_back(Question("composer","композитор"));
-        base.push_back(Question("climate","клімат"));
-        base.push_back(Question("compare","порівнювати"));
-        base.push_back(Question("connect","з’єднувати"));
-        base.push_back(Question("close","закривати"));
-        base.push_back(Question("cheap","дешевий"));
-        base.push_back(Question("come","приходити"));
-        base.push_back(Question("braid","косічки"));
-        base.push_back(Question("moustache","вуса"));
-        base.push_back(Question("brave","відважний"));
-        base.push_back(Question("hard-working","працьовитий"));
-        base.push_back(Question("naughty","неслухняний"));
-        base.push_back(Question("rude","грубіян"));
-        base.push_back(Question("skinny","дуже худий"));
-        base.push_back(Question("slim","стрункий"));
-        base.push_back(Question("weak","млявий"));
-        base.push_back(Question("earring","сережка"));
-        base.push_back(Question("ponytail","хвостик( з волосся)"));
-        base.push_back(Question("plump","товстий"));
-        base.push_back(Question("selfish","егоїстичний"));
-        base.push_back(Question("serious","серйозний"));
-        base.push_back(Question("shy","скромний"));
-        base.push_back(Question("spaceman","космонавт"));
-        base.push_back(Question("scientist","науковець"));
-        base.push_back(Question("writer","письменник"));
-        base.push_back(Question("waitress","офіціантка"));
-        base.push_back(Question("doctor","лікар"));
-        base.push_back(Question("air hostess","стюардеса"));
-        base.push_back(Question("seller","продавець"));
-        base.push_back(Question("businessman","підприємець"));
-        base.push_back(Question("artist","художник"));
-        base.push_back(Question("computer programmer","програміст"));
-        base.push_back(Question("travel agent","туроператор"));
-        base.push_back(Question("pasta","макарони"));
-        base.push_back(Question("pizza","піца"));
-        base.push_back(Question("sausage","ковбаса"));
-        base.push_back(Question("omelette","омлет"));
-        base.push_back(Question("hot dog","хот-дог"));
-        base.push_back(Question("soup","суп"));
-        base.push_back(Question("salad","салат"));
-        base.push_back(Question("milkshake","молочний коктейль"));
-        base.push_back(Question("tea","чай"));
-        base.push_back(Question("chicken","курча"));
-        base.push_back(Question("apple pie","яблучний пиріг"));
-        base.push_back(Question("fried bacon","смажений бекон"));
-        base.push_back(Question("french fries","картопля фрі"));
+    map<string, string> CreateList(){
+        base.insert(pair<string,string>("action","дія, вчинок"));
+        base.insert(pair<string,string>("activity","діяльність"));
+        base.insert(pair<string,string>("adverb","прислівник"));
+        base.insert(pair<string,string>("allow","дозволяти"));
+        base.insert(pair<string,string>("brave","сміливий"));
+        base.insert(pair<string,string>("bottle","пляшка"));
+        base.insert(pair<string,string>("beard","борода"));
+        base.insert(pair<string,string>("awful","жахливий"));
+        base.insert(pair<string,string>("catch","зловити, впіймати"));
+        base.insert(pair<string,string>("carol","різдв’яна пісня"));
+        base.insert(pair<string,string>("composer","композитор"));
+        base.insert(pair<string,string>("climate","клімат"));
+        base.insert(pair<string,string>("compare","порівнювати"));
+        base.insert(pair<string,string>("connect","з’єднувати"));
+        base.insert(pair<string,string>("close","закривати"));
+        base.insert(pair<string,string>("cheap","дешевий"));
+        base.insert(pair<string,string>("come","приходити"));
+        base.insert(pair<string,string>("braid","косічки"));
+        base.insert(pair<string,string>("moustache","вуса"));
+        base.insert(pair<string,string>("brave","відважний"));
+        base.insert(pair<string,string>("hard-working","працьовитий"));
+        base.insert(pair<string,string>("naughty","неслухняний"));
+        base.insert(pair<string,string>("rude","грубіян"));
+        base.insert(pair<string,string>("skinny","дуже худий"));
+        base.insert(pair<string,string>("slim","стрункий"));
+        base.insert(pair<string,string>("weak","млявий"));
+        base.insert(pair<string,string>("earring","сережка"));
+        base.insert(pair<string,string>("ponytail","хвостик( з волосся)"));
+        base.insert(pair<string,string>("plump","товстий"));
+        base.insert(pair<string,string>("selfish","егоїстичний"));
+        base.insert(pair<string,string>("serious","серйозний"));
+        base.insert(pair<string,string>("shy","скромний"));
+        base.insert(pair<string,string>("spaceman","космонавт"));
+        base.insert(pair<string,string>("scientist","науковець"));
+        base.insert(pair<string,string>("writer","письменник"));
+        base.insert(pair<string,string>("waitress","офіціантка"));
+        base.insert(pair<string,string>("doctor","лікар"));
+        base.insert(pair<string,string>("air hostess","стюардеса"));
+        base.insert(pair<string,string>("seller","продавець"));
+        base.insert(pair<string,string>("businessman","підприємець"));
+        base.insert(pair<string,string>("artist","художник"));
+        base.insert(pair<string,string>("computer programmer","програміст"));
+        base.insert(pair<string,string>("travel agent","туроператор"));
+        base.insert(pair<string,string>("pasta","макарони"));
+        base.insert(pair<string,string>("pizza","піца"));
+        base.insert(pair<string,string>("sausage","ковбаса"));
+        base.insert(pair<string,string>("omelette","омлет"));
+        base.insert(pair<string,string>("hot dog","хот-дог"));
+        base.insert(pair<string,string>("soup","суп"));
+        base.insert(pair<string,string>("salad","салат"));
+        base.insert(pair<string,string>("milkshake","молочний коктейль"));
+        base.insert(pair<string,string>("tea","чай"));
+        base.insert(pair<string,string>("chicken","курча"));
+        base.insert(pair<string,string>("apple pie","яблучний пиріг"));
+        base.insert(pair<string,string>("fried bacon","смажений бекон"));
+        base.insert(pair<string,string>("french fries","картопля фрі"));
 
 
 

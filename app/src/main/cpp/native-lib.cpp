@@ -18,18 +18,17 @@ Java_com_example_gromykjuriy_coursework_1v02_MainActivity_getListBase(JNIEnv *en
     jobjectArray retArr;
     ListTest base;
     unsigned long int n = base.CreateList().size() * 2;
-    list<Question> tempList = base.CreateList();
-    list<Question>::iterator iter = tempList.begin();
+    map<string, string> tempList = base.CreateList();
+    map<string, string>::iterator iter = tempList.begin();
     char* quest[n];
     for(int i = 0; i < n; i++, iter++){
-        quest[i] = (char*)iter->getAsk().c_str();
+        quest[i] = (char*)iter->first.c_str();
         i++;
-        quest[i] =(char*)iter->getAnswer().c_str();
+        quest[i] =(char*)iter->second.c_str();
     }
     retArr = (jobjectArray)env->NewObjectArray(n,
                                                env->FindClass("java/lang/String"),
                                                env->NewStringUTF(""));
-
     for(int i = 0;i < n;i++) {
         env->SetObjectArrayElement(
                 retArr,i,env->NewStringUTF(quest[i]));

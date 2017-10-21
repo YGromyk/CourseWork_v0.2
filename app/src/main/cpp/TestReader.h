@@ -10,11 +10,10 @@
 #include <list>
 class TestReader {
 private:
-    auto FileSource();
-    list<Question> testBase;
+    map<string, string> testBase;
 public:
     TestReader();
-
+    map<string, string> getBaseFromFile();
 };
 
 
