@@ -2,24 +2,26 @@
 // Created by Gromyk Juriy on 10/19/2017.
 //
 #include "TestReader.h"
-#include <vector>
+#include <vector>#include "TestReader.h"
+#include <iostream>
+
 TestReader::TestReader() {
     ifstream inFile;
     inFile.open("base.txt", ios_base::out);
     string key, value;
-    while(inFile.eof())
-    {
 
+    while (!inFile.eof())
+    {
         string buffer;
         getline(inFile, buffer);
-        if(!buffer.empty() && key.empty() && buffer != "############"){
+        if (!buffer.empty() && key.empty() && buffer != "############") {
             key = buffer;
             continue;
         }
-        if(!buffer.empty() && !key.empty()){
+        if (!buffer.empty() && !key.empty()) {
             value = buffer;
         }
-        if(!key.empty() && !value.empty()){
+        if (!key.empty() && !value.empty()) {
             testBase.insert(pair<string, string>(key, value));
             key.erase();
             value.erase();

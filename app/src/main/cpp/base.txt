@@ -1,4 +1,4 @@
-############
+﻿############
 word
 слово
 ############
@@ -83,32 +83,3 @@ weak
 earring
 сережка
 ############
-        base.push_back(Question("ponytail","хвостик( з волосся)"));
-        base.push_back(Question("plump","товстий"));
-        base.push_back(Question("selfish","егоїстичний"));
-        base.push_back(Question("serious","серйозний"));
-        base.push_back(Question("shy","скромний"));
-        base.push_back(Question("spaceman","космонавт"));
-        base.push_back(Question("scientist","науковець"));
-        base.push_back(Question("writer","письменник"));
-        base.push_back(Question("waitress","офіціантка"));
-        base.push_back(Question("doctor","лікар"));
-        base.push_back(Question("air hostess","стюардеса"));
-        base.push_back(Question("seller","продавець"));
-        base.push_back(Question("businessman","підприємець"));
-        base.push_back(Question("artist","художник"));
-        base.push_back(Question("computer programmer","програміст"));
-        base.push_back(Question("travel agent","туроператор"));
-        base.push_back(Question("pasta","макарони"));
-        base.push_back(Question("pizza","піца"));
-        base.push_back(Question("sausage","ковбаса"));
-        base.push_back(Question("omelette","омлет"));
-        base.push_back(Question("hot dog","хот-дог"));
-        base.push_back(Question("soup","суп"));
-        base.push_back(Question("salad","салат"));
-        base.push_back(Question("milkshake","молочний коктейль"));
-        base.push_back(Question("tea","чай"));
-        base.push_back(Question("chicken","курча"));
-        base.push_back(Question("apple pie","яблучний пиріг"));
-        base.push_back(Question("fried bacon","смажений бекон"));
-        base.push_back(Question("french fries","картопля фрі"));

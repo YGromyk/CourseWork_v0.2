@@ -2,6 +2,9 @@
 #include <string>
 #include "ListTest.cpp"
 #include "Question.cpp"
+
+
+
 extern "C"
 JNIEXPORT jstring JNICALL
 Java_com_example_gromykjuriy_coursework_1v02_MainActivity_stringFromJNI(
@@ -11,6 +14,16 @@ Java_com_example_gromykjuriy_coursework_1v02_MainActivity_stringFromJNI(
     return env->NewStringUTF(hello.c_str());
 }
 
+
+
+extern "C"
+JNIEXPORT jstring JNICALL
+Java_com_example_gromykjuriy_coursework_1v02_Main2Activity_stringFromJNI(
+        JNIEnv *env,
+        jobject /* this */) {
+    std::string hello = "Hello from C++";
+    return env->NewStringUTF(hello.c_str());
+}
 
 extern "C"
 JNIEXPORT jobjectArray JNICALL
@@ -36,6 +49,17 @@ Java_com_example_gromykjuriy_coursework_1v02_MainActivity_getListBase(JNIEnv *en
     return retArr;
 }
 
+extern "C"
+JNIEXPORT jobjectArray JNICALL
+Java_com_example_gromykjuriy_coursework_1v02_SecondActivity1_getListBase(JNIEnv *env, jstring jStr ){
+    return Java_com_example_gromykjuriy_coursework_1v02_MainActivity_getListBase(env,jStr );
+}
+
+extern "C"
+JNIEXPORT jobjectArray JNICALL
+Java_com_example_gromykjuriy_coursework_1v02_TestActivity_getListBase(JNIEnv *env, jstring jStr ){
+    return Java_com_example_gromykjuriy_coursework_1v02_MainActivity_getListBase(env,jStr );
+}
 
 extern "C"
 JNIEXPORT jobjectArray JNICALL
@@ -61,3 +85,11 @@ Java_com_example_gromykjuriy_coursework_1v02_MainActivity_func(JNIEnv *env, jobj
     }
     return retArr;
 }
+
+
+extern "C"
+JNIEXPORT jstring JNICALL
+        Java_com_example_gromykjuriy_coursework_1v02_Main2Activity_equals(JNIEnv *env, jobject, jstring jStr ){
+
+
+    }
